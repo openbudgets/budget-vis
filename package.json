@@ -15,7 +15,8 @@
 	"d3-collection": "^1.0.4",
 	"d3-request": "^1.0.6",
 	"serve-favicon": "^2.4.5",
-	"express": "^4.16.2"
+	"express": "^4.16.2",
+  "express-namespace"
 },
   "devDependencies": {
 	"axios": "^0.17.1",
