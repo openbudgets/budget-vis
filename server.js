@@ -16,6 +16,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/'));
 app.use(favicon(__dirname + '/src/favicon.ico'));
+app.enable('trust proxy');
 
 let cache = null;
 let dimYears = null;
