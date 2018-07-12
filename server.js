@@ -14,8 +14,8 @@ app.set('port', (process.env.PORT || 4000));
 app.set('views', __dirname + '/');
 app.set('view engine', 'ejs');
 
-app.use('/obeuvis', express.static(__dirname + '/'));
-app.use('/obeuvis', favicon(__dirname + '/src/favicon.ico'));
+app.use(express.static(__dirname + '/'));
+app.use(favicon(__dirname + '/src/favicon.ico'));
 app.enable('trust proxy');
 
 let cache = null;
