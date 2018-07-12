@@ -14,8 +14,13 @@ app.set('port', (process.env.PORT || 4000));
 app.set('views', __dirname + '/');
 app.set('view engine', 'ejs');
 
-app.use(express.static(__dirname + '/'));
-app.use(favicon(__dirname + '/src/favicon.ico'));
+app.use('/obeuvis', express.static(__dirname + '/data'));
+app.use('/obeuvis', express.static(__dirname + '/src/app.js'));
+app.use('/obeuvis', express.static(__dirname + '/src/actions'));
+app.use('/obeuvis', express.static(__dirname + '/src/utils'));
+app.use('/obeuvis', express.static(__dirname + '/src/reducers'));
+app.use('/obeuvis', express.static(__dirname + '/src/components'));
+app.use('/obeuvis', favicon(__dirname + '/src/favicon.ico'));
 app.enable('trust proxy');
 
 let cache = null;
