@@ -22,7 +22,7 @@ const CONFIG = require('../config/settings.json')
 
 export function fetchDimYears () {
 	return function (dispatch) {
-		axios.get('/dim-years')
+		axios.get('/obeuvis/dim-years')
 			.then((resp) => {
 				CONFIG.dimYears = resp.data;
 				dispatch({

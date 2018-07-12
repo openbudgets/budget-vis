@@ -38,7 +38,7 @@ export function fetch (dispatch, ls, userAction) {
 	let params = [view, level, parent];
 	if (ls.view == View.CATS)
 		params.push(year);	// only relevant for categories
-	const query = '/data?' + params.join('&');
+	const query = '/obeuvis/data?' + params.join('&');
 	//console.log(query);
 	axios.get(query)
 		.then((resp) => {
