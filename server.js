@@ -21,11 +21,11 @@ app.enable('trust proxy');
 let cache = null;
 let dimYears = null;
 
-app.get('/dim-years', function(req, res) {
+app.get('/obeuvis/dim-years', function(req, res) {
 	res.send(dimYears);
 });
 
-app.get('/stacks', function(req, res) {
+app.get('/obeuvis/stacks', function(req, res) {
 	if (err) throw err;
 
 	let data, parent, year, dim, level;
@@ -39,7 +39,7 @@ app.get('/stacks', function(req, res) {
 	res.send(data);
 });
 
-app.get('/data', function(req, res) {
+app.get('/obeuvis/data', function(req, res) {
 	const view = req.query.view;
 	const level = req.query.level;
 	const parent = req.query.parent;
